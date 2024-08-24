@@ -8,29 +8,69 @@
   
   <title>Frontend Mentor | Todo app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js"></script>
 </head>
+
 <body>
+  <div class="background">
+    <div class="container">
+      <div class="header">
+        <span>T O D O</span>
+        <img class="light-image" src="images/icon-sun.svg" alt="">
+      </div>
+      
+      <div class="input-div">
+        <input type="text" class="todo-input" placeholder="Create new ToDo!!">
+      </div>
+      
+      <div class="todo-list">
+        <!-- <div class="todo-item">
+          <input style="border-radius: 50%;" type="checkbox">
+          <span>Complete online javascript course</span>
+        </div> -->
+        
 
-  Todo
+      </div>
+    
+      <div class="Convenience">
+        <div class="left-item-div">
+          <h3><span id="item-count">0 </span>items left</h3> 
+        </div>
 
-  <!-- Add dynamic number --> items left
+        <div class="select-div">
+          <span style="color: hsl(192, 100%, 67%);">All</span>
+          <span class="all-active">Active</span>
+          <span class="all-check">Completed</span>
+        </div>
 
-  All
-  Active 
-  Completed
+        <div class="clear-checked-div">
+          <h4 style="color:gray;">Clear Completed</h4>
+        </div>
+      </div>
 
-  Clear Completed
+      <div style="text-align: center;">
+        Drag and drop to reorder list
+      </div>
 
-  Drag and drop to reorder list
+    </div>
+
+    
+  </div>
+
+  
+
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
-</html>
+</html> 
+
+
+<!-- Todo
+
+
+
+

@@ -1,0 +1,223 @@
+body {
+    margin : 0;
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+    background-image: url("/images/bg-desktop-light.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+    .background.light-mode {
+        background-color: hsl(0, 0%, 98%);
+        color : black;
+    }
+
+    .background.dark-mode {
+        background-color: hsl(235, 21%, 11%);
+        color: white;
+    }
+
+@media screen and (max-width: 768px) {
+    .background {
+        background-image: url("/images/bg-mobile-dark.jpg");
+    }
+}
+
+
+
+.container {
+    width: 30rem;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    
+
+    margin : 2rem auto;
+    padding: 2rem;
+}
+    .container div {
+        /* padding-bottom: 1rem;
+        padding-top: 1rem;  */
+    }
+.header {
+    padding-bottom: 1rem;
+    padding-top: 1rem; 
+}
+
+.header span {
+    font-size: 3rem;
+    cursor:pointer;
+}
+
+.header img {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+    .light-image {
+        float: right;
+    }
+
+.input-div {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.todo-input {
+    width: 100%;
+    height: 4rem;
+    padding: 1rem 1rem;
+    
+
+    font-size: 1.5rem;
+
+    box-sizing: border-box;
+    background-color: white;
+
+    outline: none;
+}
+    .todo-input.light-mode {
+        background-color: white;
+        color : black;
+    }
+
+    .todo-input.dark-mode {
+        background-color: hsl(235, 24%, 19%);
+        color: white;
+    }
+
+/*------------------------------------*/
+
+.todo-list {
+    width:100%;
+    min-height: 20rem; 
+    max-height: 25rem;
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+    background-color: white;
+}
+    .todo-list.light-mode {
+        background-color: white;
+        color : black;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    } 
+
+    .todo-list.dark-mode {
+        background-color: hsl(235, 24%, 19%);
+        color: white;
+        box-shadow: 0px 4px 8px rgba(98, 0, 255, 0.527);
+    } 
+
+    .todo-list::-webkit-scrollbar {
+        width: 8px; /* 스크롤바의 너비 */
+    }
+
+    /* 스크롤바 트랙 스타일 */
+    .todo-list::-webkit-scrollbar-track {
+        background: hsl(237, 22%, 50%); /* 스크롤바 트랙(배경) 색상 */
+        border-radius: 10px; /* 트랙의 둥근 모서리 */
+    }
+
+    /* 스크롤바 핸들(막대) 스타일 */
+    .todo-list::-webkit-scrollbar-thumb {
+        background: hsl(233, 28%, 65%); /* 스크롤바 핸들의 색상 */
+        border-radius: 10px; /* 핸들의 둥근 모서리 */
+    }
+
+    /* 스크롤바 핸들(막대) 마우스 오버 시 스타일 */
+    .todo-list::-webkit-scrollbar-thumb:hover {
+        background: hsl(280, 27%, 74%); /* 핸들의 마우스 오버 시 색상 */
+    }
+
+/*-------------------------------------------*/
+
+.todo-item {
+    background-color: white;
+    color : black;
+    border-bottom: solid 1px gray;
+
+    width:100%;
+    padding: 1.2rem 1.2rem;
+    box-sizing: border-box;
+    
+}
+    .todo-item.light-mode {
+        background-color: white;
+        color : black;
+    }
+
+    .todo-item.dark-mode {
+        background-color: hsl(235, 24%, 19%);
+        color: white;
+    }
+
+    .todo-item span {
+        padding-left: 1rem;
+        font-size: 1.5rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+
+    .todo-item input[type="checkbox"] {
+        transform: scale(1.5);
+        
+        border-radius: 50%;
+
+        width: 1rem;
+        height: 1rem;
+        border: 1px solid #999;
+        appearance: none;
+        cursor: pointer;
+        transition: background 0.1s;
+    }
+    .todo-item input[type="checkbox"]:checked {
+        background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+        border: none;
+    }
+
+
+
+/* --------------------------------------------*/
+
+.Convenience {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.Convenience div {
+    padding: 1rem;
+}
+
+.select-div span {
+    display: inline-block;
+    margin-top: 18px;
+}
+
+.all-check {
+    cursor:pointer;
+}
+
+.all-active {
+    cursor:pointer;
+}
+
+.clear-checked-div {
+    cursor: pointer;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
