@@ -73,7 +73,13 @@ window.addEventListener("load" , function() {
         todoItems.forEach( item => {
             const checkbox = item.querySelector("input");
             if(checkbox.checked == false)
+            {
                 checkbox.checked = true;
+                const span = item.querySelector("span"); 
+                span.style.textDecoration = "line-through";
+                span.style.opacity = 0.5;
+            }
+                
         });
     }
 
@@ -81,8 +87,13 @@ window.addEventListener("load" , function() {
         const todoItems = todoList.querySelectorAll(".todo-item");
         todoItems.forEach( item => {
             const checkbox = item.querySelector("input");
-            if(checkbox.checked == true)
+            if(checkbox.checked == true) {
                 checkbox.checked = false;
+                const span = item.querySelector("span"); 
+                span.style.textDecoration = "none";
+                span.style.opacity = 1;
+            }
+                
         });
     }
 
